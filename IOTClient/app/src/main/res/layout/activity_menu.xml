@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="#E6E6FA"
+    android:weightSum="1"
+    tools:context="com.example.shixun.iotclient.menu.MenuActivity">
+
+
+    <TextView
+        android:id="@+id/led"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:background="@drawable/underline"
+        android:inputType="textPersonName"
+        android:text="LED灯"
+        android:textColor="#696969"
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:id="@+id/im_trum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/trum"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/led"
+        android:layout_toLeftOf="@+id/trum"
+        android:layout_toStartOf="@+id/trum"
+        app:srcCompat="@drawable/im_trumpet"/>
+
+    <TextView
+        android:id="@+id/trum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="播放器"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:layout_below="@+id/led"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/im_led"
+        android:layout_toEndOf="@+id/im_led"/>
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/trum"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="温度:"
+        android:textColor="#696969"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/hum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/temp"
+        android:layout_alignStart="@+id/temp"
+        android:layout_below="@+id/temp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="湿度:"
+        android:textColor="#696969"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hum"
+        android:layout_alignStart="@+id/hum"
+        android:layout_below="@+id/hum"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="光照:"
+        android:textColor="#696969"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/gas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/light"
+        android:layout_alignStart="@+id/light"
+        android:layout_below="@+id/light"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="气体:"
+        android:textColor="#696969"
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:id="@+id/im_led"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/im_led"
+        android:layout_alignTop="@+id/led"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/trum"
+        android:layout_toLeftOf="@+id/hum"
+        android:layout_toStartOf="@+id/hum"/>
+
+    <ImageView
+        android:id="@+id/im_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hum"
+        android:layout_alignEnd="@+id/im_trum"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/im_led"
+        android:layout_alignTop="@+id/temp"
+        app:srcCompat="@drawable/im_temp"/>
+
+    <ImageView
+        android:id="@+id/im_hum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/im_hun"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/light"
+        android:layout_toLeftOf="@+id/hum"
+        android:layout_toStartOf="@+id/hum"
+        android:layout_alignTop="@+id/hum"/>
+
+    <ImageView
+        android:id="@+id/im_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/light"
+        android:layout_toLeftOf="@+id/light"
+        android:layout_toStartOf="@+id/light"
+        app:srcCompat="@drawable/im_light"/>
+
+    <ImageView
+        android:id="@+id/im_gas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/gas"
+        android:layout_toLeftOf="@+id/gas"
+        android:layout_toStartOf="@+id/gas"
+        app:srcCompat="@drawable/im_gas"/>
+
+
+    <TextView
+        android:id="@+id/t_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/temp"
+        android:layout_alignBottom="@+id/temp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="100dp"
+        android:background="#FFFFFF"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/t_hum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_marginRight="100dp"
+        android:layout_alignBaseline="@+id/hum"
+        android:layout_alignBottom="@+id/hum"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/t_temp"
+        android:layout_alignStart="@+id/t_temp"/>
+
+    <TextView
+        android:id="@+id/t_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/light"
+        android:layout_alignBottom="@+id/light"
+        android:layout_marginRight="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_alignLeft="@+id/t_hum"
+        android:layout_alignStart="@+id/t_hum"/>
+
+    <TextView
+        android:id="@+id/t_gas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gas"
+        android:layout_marginRight="100dp"
+        android:background="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_alignLeft="@+id/t_light"
+        android:layout_alignStart="@+id/t_light"/>
+
+    <Button
+        android:id="@+id/b_led"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/led"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/led"
+        android:background="@drawable/button2"
+        android:text="  >>>>>>>>>> "
+        android:textColor="#708090"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/b_trum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/trum"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/trum"
+        android:background="@drawable/button2"
+        android:text="  >>>>>>>>>> "
+        android:textColor="#708090"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button2"
+        android:layout_above="@+id/hum"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/temp"
+        android:text="get"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/light"
+        android:background="@drawable/button2"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignStart="@+id/button1"
+        android:layout_alignTop="@+id/hum"
+        android:text="get"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gas"
+        android:background="@drawable/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_alignTop="@+id/light"
+        android:text="get"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gas"
+        android:background="@drawable/button2"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignStart="@+id/button3"
+        android:layout_alignTop="@+id/gas"
+        android:text="get"/>
+
+
+</RelativeLayout>

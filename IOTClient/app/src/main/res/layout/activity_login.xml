@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:padding="15dp"
+        android:background="#F6F6F6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/ip"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/port"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/port"
+        android:background="@drawable/cycle"
+        android:ems="10"
+        android:hint="输入IP地址"
+        android:inputType="textPersonName"
+        android:textColorHint="#708090"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/port"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ip"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@+id/IP"
+        android:layout_toRightOf="@+id/IP"
+        android:background="@drawable/cycle"
+        android:ems="10"
+        android:hint="输入端口号"
+        android:inputType="textPersonName"
+        android:textColorHint="#708090"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/IP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP地址:"
+        android:textSize="30sp"
+        android:layout_above="@+id/port"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/PORT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="端口号:"
+        android:textSize="30sp"
+        android:layout_alignBottom="@+id/port"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/port"
+        android:layout_marginTop="28dp"
+        android:layout_toLeftOf="@+id/ip"
+        android:layout_toStartOf="@+id/ip"
+        android:background="@drawable/button"
+        android:text="连接"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/lgout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/link"
+        android:layout_alignBottom="@+id/link"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/logout"
+        android:text="退出"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/link"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/im_logo" />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/link"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/link"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/logout"
+        android:text="帮助"
+        android:textSize="30sp" />
+</RelativeLayout>
